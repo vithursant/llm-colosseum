@@ -331,7 +331,7 @@ To increase your score, move toward the opponent and attack the opponent. To pre
 
     def call_llm(
         self,
-        temperature: float = 0.9,
+        temperature: float = 1.0,
         max_tokens: int = 100,
         top_p: float = 1.0,
     ) -> str:

@@ -33,7 +33,6 @@ def get_client(model_str):
         return Fireworks(model=model_name)
     elif provider == "groq":
         from llama_index.llms.groq import Groq
-        import os
 
         return Groq(model=model_name)
     elif provider == "ollama":
