@@ -15,16 +15,19 @@ def main():
     game = Game(
         render=True,
         player_1=Player1(
-            nickname="Daddy",
-            model="ollama:llama3",
+            nickname="Cerebras",
+            model="cerebras:llama3.1-70b",
         ),
         player_2=Player2(
-            nickname="Baby",
-            model="anthropic:claude-3-haiku-20240307",
+            # nickname="Groq",
+            # model="groq:llama-3.1-70b-versatile",
+            # nickname="Together AI",
+            # model="together:meta-llama/Meta-Llama-3.1-70B-Instruct-Turbo",
+            nickname="Fireworks AI",
+            model="fireworks:accounts/fireworks/models/llama-v3p1-70b-instruct",
         ),
     )
     return game.run()
-
 
 if __name__ == "__main__":
     main()
