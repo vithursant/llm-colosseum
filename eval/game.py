@@ -47,7 +47,22 @@ class Player:
             assert (
                 os.environ.get("MISTRAL_API_KEY") is not None
             ), "Mistral API key not set"
-
+        if self.model.startswith("cerebras"):
+            assert (
+                os.environ.get("CEREBRAS_API_KEY") is not None
+            ), "Cerebras API key not set" 
+        if self.model.startswith("together"):
+            assert (
+                os.environ.get("TOGETHER_API_KEY") is not None
+            ), "Together API key not set" 
+        if self.model.startswith("fireworks"):
+            assert (
+                os.environ.get("FIREWORKS_API_KEY") is not None
+            ), "Fireworks API key not set" 
+        if self.model.startswith("groq"):
+            assert (
+                os.environ.get("GROQ_API_KEY") is not None
+            ), "Groq API key not set" 
 
 class Player1(Player):
     def __init__(

@@ -19,11 +19,22 @@ def get_client(model_str):
         from llama_index.llms.anthropic import Anthropic
 
         return Anthropic(model=model_name)
-    elif provider == "mixtral" or provider == "groq":
+    elif provider == "cerebras":
+        from llama_index.llms.cerebras import Cerebras
+
+        return Cerebras(model=model_name)
+    elif provider == "together":
+        from llama_index.llms.together import TogetherLLM
+
+        return TogetherLLM(model=model_name)
+    elif provider == "fireworks":
+        from llama_index.llms.fireworks import Fireworks
+
+        return Fireworks(model=model_name)
+    elif provider == "groq":
         from llama_index.llms.groq import Groq
 
         return Groq(model=model_name)
-
     elif provider == "ollama":
         from llama_index.llms.ollama import Ollama
 
